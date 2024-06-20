@@ -13,6 +13,7 @@
     "@linaria/react": "^6.2.1",
     "@tanstack/react-query": "^5.45.1",
     "@wyw-in-js/babel-preset": "^0.5.3",
+    "eslint-plugin-unused-imports": "^4.0.0",
     "husky": "^9.0.11",
     "next": "14.2.4",
     "react": "^18",
@@ -23,9 +24,9 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "cypress": "^13.12.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "eslint-plugin-perfectionist": "^2.11.0",
     "typescript": "^5",
     "vitest": "^1.6.0"
   }
