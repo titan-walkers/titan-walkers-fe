@@ -1,5 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import useStore from "../zustand/store";
+import useZustandStore from "../zustand/store";
+import { useShallow } from "zustand/react/shallow";
 
 export default function Home() {
   return (
