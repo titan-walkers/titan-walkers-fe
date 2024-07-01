@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@linaria/core": "^6.2.0",
@@ -32,13 +35,19 @@
     "@storybook/nextjs": "^8.1.11",
     "@storybook/react": "^8.1.11",
     "@storybook/test": "^8.1.11",
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "cypress": "^13.12.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "jsdom": "^24.1.0",
     "storybook": "^8.1.11",
     "typescript": "latest",
     "vitest": "^1.6.0"
