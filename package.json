@@ -40,7 +40,7 @@
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.1.11",
-    "typescript": "^5",
+    "typescript": "latest",
     "vitest": "^1.6.0"
   }
 }
