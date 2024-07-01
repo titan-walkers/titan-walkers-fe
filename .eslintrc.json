@@ -1,6 +1,12 @@
 {
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["perfectionist", "unused-imports"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "perfectionist",
+    "unused-imports"
+  ],
   "rules": {
     "unused-imports/no-unused-imports": "error",
     "perfectionist/sort-imports": [
@@ -8,14 +14,25 @@
       {
         "groups": [
           "react",
-          ["builtin", "external"],
+          [
+            "builtin",
+            "external"
+          ],
           "type",
           "customType",
           "zustand",
           "internal-type",
           "internal",
-          ["parent-type", "sibling-type", "index-type"],
-          ["parent", "sibling", "index"],
+          [
+            "parent-type",
+            "sibling-type",
+            "index-type"
+          ],
+          [
+            "parent",
+            "sibling",
+            "index"
+          ],
           "side-effect",
           "style",
           "object",
@@ -23,8 +40,14 @@
         ],
         "custom-groups": {
           "value": {
-            "zustand": ["zustand", "@/zustand/**"],
-            "react": ["react", "react-*"],
+            "zustand": [
+              "zustand",
+              "@/zustand/**"
+            ],
+            "react": [
+              "react",
+              "react-*"
+            ],
             "customType": "@/types/**"
           },
           "type": {
