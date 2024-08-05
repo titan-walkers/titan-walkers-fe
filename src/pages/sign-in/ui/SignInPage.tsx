@@ -5,11 +5,11 @@ import { useFormState, useFormStatus } from "react-dom";
 
 import { onSubmit } from "@/shared/utils/onSubmit";
 
-import { showErrorMessage } from "../model/showErrorMessage";
-
 const SignInPage = () => {
   const [state, formAction] = useFormState(onSubmit, { message: null });
   const { pending } = useFormStatus();
+
+  console.log(state);
   return (
     <div>
       <div>
@@ -37,7 +37,7 @@ const SignInPage = () => {
             <button type="submit" disabled={pending}>
               가입하기
             </button>
-            <div>{showErrorMessage(state?.message)}</div>
+            {/* <div>{showErrorMessage(state?.message)}</div> */}
           </div>
         </form>
       </div>

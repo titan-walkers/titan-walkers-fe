@@ -1,12 +1,8 @@
 "use server";
 
-import { redirect } from "next/navigation";
 export const onSubmit = async (prevState: any, formData: FormData) => {
   if (!formData.get("id") || !(formData.get("id") as string)?.trim()) {
     return { message: "no_id" };
-  }
-  if (!formData.get("name") || !(formData.get("name") as string)?.trim()) {
-    return { message: "no_name" };
   }
   if (
     !formData.get("password") ||
@@ -28,13 +24,13 @@ export const onSubmit = async (prevState: any, formData: FormData) => {
     if (response.status === 403) {
       return { message: "user_exists" };
     }
-    shouldRedirect = true;
+    return response.json();
   } catch (err) {
     console.error(err);
     return { message: null };
   }
 
-  if (shouldRedirect) {
-    redirect("/home"); // try/catch문 안에서 X
-  }
+  // if (shouldRedirect) {
+  //   redirect("/home"); // try/catch문 안에서 X
+  // }
 };
