@@ -1,11 +1,9 @@
-"use client";
-
 import React from "react";
 
-import SignInPage from "@/pages/sign-in/ui/SignInPage";
+import SignInContainer from "@/pages/sign-in/ui/SignInContainer";
 
 const SignIn = () => {
-  return <SignInPage />;
+  return <SignInContainer />;
 };
 
 export default SignIn;
