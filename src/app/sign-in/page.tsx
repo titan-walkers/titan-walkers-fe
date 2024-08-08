@@ -1,7 +1,9 @@
 import React from "react";
 
-const SignInPage = () => {
-  return <div>sign-in </div>;
+import SignInContainer from "@/pages/sign-in/ui/SignInContainer";
+
+const SignIn = () => {
+  return <SignInContainer />;
 };
 
-export default SignInPage;
+export default SignIn;

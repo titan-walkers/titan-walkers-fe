@@ -3,6 +3,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "types": ["doctrine", "eslint"],
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -17,7 +18,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
+      "@app/*": ["./src/app/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@features/*": ["./src/features/*"],
       "@/*": ["./src/*"]
     }
   },
