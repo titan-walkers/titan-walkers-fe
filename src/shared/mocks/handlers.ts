@@ -5,7 +5,7 @@ export const handlers = [
     console.log("로그아웃");
     return new HttpResponse(null, {
       headers: {
-        "Set-Cookie": "connect.sid=;HttpOnly;Path=/;Max-Age=0",
+        "Set-Cookie": "titan=;HttpOnly;Path=/;Max-Age=0",
       },
     });
   }),
@@ -19,7 +19,7 @@ export const handlers = [
       { message: "success" },
       {
         headers: {
-          "Set-Cookie": "connect.sid=msw-cookie;HttpOnly;Path=/",
+          "Set-Cookie": "titan=msw-cookie;HttpOnly;Path=/",
         },
       }
     );
