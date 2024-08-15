@@ -2,6 +2,7 @@ import React from "react";
 
 import { MSWComponent } from "./MSWComponent";
 import QueryClientComponent from "./QueryClientComponent";
+import { StyledComponentRegistry } from "./StyledComponentRegistry";
 
 type Props = {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ type Props = {
 const Provider = ({ children }: Props) => {
   return (
     <QueryClientComponent>
-      {children}
+      <StyledComponentRegistry>{children}</StyledComponentRegistry>
       <MSWComponent />
     </QueryClientComponent>
   );
