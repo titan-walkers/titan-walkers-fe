@@ -1,6 +1,6 @@
 import React from "react";
 
-import SignInContainer from "@/pages/sign-in/ui/SignInContainer";
+import SignInContainer from "@container/sign-in/ui/SignInContainer";
 
 const SignIn = () => {
   return <SignInContainer />;

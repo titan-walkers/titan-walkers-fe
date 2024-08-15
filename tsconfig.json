@@ -21,6 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["./src/app/*"],
+      "@container/*": ["./src/container/*"],
       "@entities/*": ["./src/entities/*"],
       "@shared/*": ["./src/shared/*"],
       "@widgets/*": ["./src/widgets/*"],
