@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 export const ProfileWrapper = styled.button`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,4 +27,8 @@ export const ProfileName = styled.div`
   font-size: 11px;
   line-height: 28px;
   padding-left: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;

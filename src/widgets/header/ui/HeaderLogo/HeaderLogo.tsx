@@ -1,8 +1,8 @@
 import React from "react";
 
+import IconMailWord from "../../icons/IconMailWord";
+import IconNaver from "../../icons/IconNaver";
 import * as S from "./HeaderLogo.style";
-import IconMailWord from "./icons/IconMailWord";
-import IconNaver from "./icons/IconNaver";
 
 const HeaderLogo = () => {
   return (

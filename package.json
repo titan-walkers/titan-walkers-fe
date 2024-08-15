@@ -59,6 +59,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jsdom": "^24.1.0",
     "storybook": "^8.1.11",
+    "testing-library": "^0.0.2",
     "typescript": "latest",
     "vitest": "^1.6.0"
   },

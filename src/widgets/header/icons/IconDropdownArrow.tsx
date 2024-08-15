@@ -14,16 +14,16 @@ const IconDropdownArrow = () => {
       <g
         id="Symbols"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         opacity="0.800000012"
       >
         <g
           id="개인화_메뉴"
           transform="translate(-71.000000, -26.000000)"
           fill="#303038"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         >
           <g id="Group-6" transform="translate(0.000000, 14.000000)">
             <path

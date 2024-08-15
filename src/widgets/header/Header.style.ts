@@ -13,4 +13,5 @@ export const HeaderWrapper = styled.header`
   box-shadow: 0 1px 5px 0 rgba(107, 119, 172, 0.2);
   background-color: #fff;
   padding: 0 16px;
+  z-index: 50;
 `;

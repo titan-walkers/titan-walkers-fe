@@ -12933,6 +12933,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"testing-library@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "testing-library@npm:0.0.2"
+  dependencies:
+    tslib: ^1.9.0
+  peerDependencies:
+    "@angular/common": ^6.0.0-rc.0 || ^6.0.0
+    "@angular/core": ^6.0.0-rc.0 || ^6.0.0
+  checksum: 31fa80a8b35202b3adfea31c245a8557d557364b04e715f55e82c90165a0739d2d43e37be7a7758c8360cf79389d4e30fb8acf8078fc03868087ea9518a0bd23
+  languageName: node
+  linkType: hard
+
 "text-table@npm:^0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
@@ -13036,6 +13048,7 @@ __metadata:
     react-dom: ^18
     storybook: ^8.1.11
     styled-components: ^6.1.12
+    testing-library: ^0.0.2
     typescript: latest
     vitest: ^1.6.0
     zustand: ^4.5.2
@@ -13176,7 +13189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1":
+"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
