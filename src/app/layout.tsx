@@ -1,3 +1,5 @@
+import Header from "@widgets/header/Header";
+
 import Provider from "./_provider/Provider";
 
 export default function RootLayout({
@@ -8,7 +10,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );
