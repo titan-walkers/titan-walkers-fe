@@ -23,6 +23,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@wyw-in-js/babel-preset": "^0.5.3",
+    "cookie": "^0.6.0",
     "cors": "^2.8.5",
     "eslint-plugin-unused-imports": "^4.0.0",
     "express": "^4.19.2",
