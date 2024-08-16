@@ -21,18 +21,18 @@ const SignInContainer = () => {
       <S.FormBox action={formAction}>
         <div>
           <S.IdBox>
-            <label htmlFor="id">아이디 또는 전화번호</label>
-            <S.Input id="id" name="id" type="text" placeholder="" required />
+            <S.IDLabel htmlFor="id">아이디 또는 전화번호</S.IDLabel>
+            {/* <S.Input id="id" name="id" type="text" placeholder="" required /> */}
           </S.IdBox>
           <S.PwBox>
-            <label htmlFor="password">비밀번호</label>
-            <S.Input
+            <S.PWLabel htmlFor="password">비밀번호</S.PWLabel>
+            {/* <S.Input
               id="password"
               name="password"
               type="password"
               placeholder=""
               required
-            />
+            /> */}
           </S.PwBox>
           <S.Button type="submit" disabled={pending}>
             로그인
@@ -41,6 +41,28 @@ const SignInContainer = () => {
 
         {/* <div>{showErrorMessage(state?.message)}</div> */}
       </S.FormBox>
+      <S.BottomTextRow>
+        <span>비밀번호 찾기</span>
+        <S.Separator />
+        <span>아이디 찾기</span>
+        <S.Separator />
+        <span>회원가입</span>
+      </S.BottomTextRow>
+      <S.AdsBox>ADs</S.AdsBox>
+      <S.NameRow>
+        <span>강지성</span>
+        <S.Separator />
+        <span>김경문</span>
+        <S.Separator />
+        <span>김휘림</span>
+        <S.Separator />
+        <span>나유진</span>
+      </S.NameRow>
+      <S.CopyrightRow>
+        <span>Copyright</span>
+        <S.TeamName>ⓒ TitanWalkers</S.TeamName>
+        <span>All Rights Reserved.</span>
+      </S.CopyrightRow>
     </S.Container>
   );
 };
