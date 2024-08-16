@@ -3,6 +3,7 @@ import React from "react";
 import { MSWComponent } from "./MSWComponent";
 import QueryClientComponent from "./QueryClientComponent";
 import { StyledComponentRegistry } from "./StyledComponentRegistry";
+import ThemeProviderComponent from "./ThemeProviderComponent";
 
 type Props = {
   children: React.ReactNode;
@@ -10,10 +11,12 @@ type Props = {
 
 const Provider = ({ children }: Props) => {
   return (
-    <QueryClientComponent>
-      <StyledComponentRegistry>{children}</StyledComponentRegistry>
-      <MSWComponent />
-    </QueryClientComponent>
+    <ThemeProviderComponent>
+      <QueryClientComponent>
+        <StyledComponentRegistry>{children}</StyledComponentRegistry>
+        <MSWComponent />
+      </QueryClientComponent>
+    </ThemeProviderComponent>
   );
 };
 

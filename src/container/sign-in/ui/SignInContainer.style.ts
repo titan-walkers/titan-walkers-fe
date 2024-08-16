@@ -48,11 +48,14 @@ export const PwBox = styled.div`
   padding: 5px;
 `;
 export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
   width: 100%;
   height: 50px;
-  background-color: #03c75a;
-  color: #fff;
+  background-color: ${({ theme }) => theme.color.green200};
+  color: ${({ theme }) => theme.color.white};
   border: none;
   border-radius: 5px;
 `;
