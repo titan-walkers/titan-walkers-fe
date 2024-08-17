@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
+import { useOutsideClick } from "@shared/hooks/useModal/useOutsideClick";
 import { truncateString } from "@shared/utils/truncateString/truncateString";
 import IconEmptyProfile from "@widgets/header/icons/IconEmptyProfile";
 
@@ -14,29 +15,18 @@ const MAX_NAME_LENGTH = 5;
 const SIGN_OUT_TEXT = "로그아웃";
 
 const HeaderProfileDetail = ({ modalState, toggleModal }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useOutsideClick(() => {
+    toggleModal(modalState);
+  });
 
   // TODO: API 통해 유저 이름을 포함한 정보 받아오기
   const userName = truncateString("Sarah Ra", MAX_NAME_LENGTH);
   const userEmail = "sarah@gmail.com";
-
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      event.preventDefault();
-      event.stopPropagation();
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        toggleModal(modalState);
-      }
-    };
-
-    if (modalState) document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [modalState, toggleModal]);
-
   return (
-    <S.ProfileDetailWrapper ref={ref} $modalState={modalState}>
+    <S.ProfileDetailWrapper
+      ref={ref as React.RefObject<HTMLDivElement>}
+      $modalState={modalState}
+    >
       <S.ProfileContents>
         <S.ProfileImage>
           <IconEmptyProfile width={80} height={80} />

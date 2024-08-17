@@ -21,40 +21,47 @@ export const Logo = styled.img`
 export const FormBox = styled.form`
   padding: 24px;
   width: 458px;
-  height: 269px;
+  min-height: 269px;
   border: 1px solid ${({ theme }) => theme.color.gray4};
   border-radius: 10px;
 `;
 
 export const IdBox = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid ${({ theme }) => theme.color.gray4};
   border-radius: 5px 5px 0 0;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   height: 60px;
 `;
 
-export const IDLabel = styled.label`
-  font-size: 16px;
+export const IDLabel = styled.label<{ $isActive?: boolean }>`
+  width: 360px;
+  font-size: ${({ $isActive }) => ($isActive ? "12px" : "16px")};
   color: ${({ theme }) => theme.color.gray5};
+  transition: 0.5s;
+  cursor: pointer;
 `;
 
 export const Input = styled.input`
+  width: 300px;
   border: none;
   outline: none;
   background-color: ${({ theme }) => theme.color.white};
+  font-size: 20px;
 `;
 
 export const PwBox = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid ${({ theme }) => theme.color.gray4};
   border-top: none;
   border-radius: 0 0 5px 5px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   height: 60px;
 `;
 export const Button = styled.button`
@@ -70,9 +77,12 @@ export const Button = styled.button`
   border-radius: 5px;
 `;
 
-export const PWLabel = styled.label`
-  font-size: 16px;
+export const PWLabel = styled.label<{ $isActive?: boolean }>`
+  width: 360px;
+  font-size: ${({ $isActive }) => ($isActive ? "12px" : "16px")};
   color: ${({ theme }) => theme.color.gray5};
+  transition: 0.5s;
+  cursor: pointer;
 `;
 
 export const BottomTextRow = styled.div`
@@ -120,4 +130,26 @@ export const CopyrightRow = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 9px;
+`;
+
+export const DeleteButton = styled.button`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: ${({ theme }) => theme.color.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.color.gray6};
+  margin-right: 10px;
+`;
+
+export const DeleteButtonSpan = styled.span`
+  margin-top: -3px;
+  font-size: 13px;
+`;
+
+export const LabelAndInputBox = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
