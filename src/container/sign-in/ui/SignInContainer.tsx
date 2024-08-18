@@ -1,16 +1,19 @@
 "use client";
 
-import React, { LegacyRef, useRef, useState } from "react";
+import React, { LegacyRef, useRef, useState, useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 
-import { useOutsideClick } from "@shared/hooks/useModal/useOutsideClick";
+import { useOutsideClick } from "@shared/hooks/useOutsideClick/useOutsideClick";
 
 import { onSubmit } from "../lib/onSubmit/onSubmit";
 import { showErrorMessage } from "../lib/showErrorMessage/showErrorMessage";
 import * as S from "./SignInContainer.style";
 
 const SignInContainer = () => {
-  const [state, formAction] = useFormState(onSubmit, { message: null });
+  const [state, formAction] = useFormState(onSubmit, {
+    message: "",
+    focusField: "",
+  });
   const { pending } = useFormStatus();
 
   const [isActiveIDInput, setIsActiveIDInput] = useState(false);
@@ -29,6 +32,20 @@ const SignInContainer = () => {
   const idInputRef = useRef<HTMLInputElement>(null);
   const pwInputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    if (state?.focusField === "email") {
+      setIsActiveIDInput(true);
+      setTimeout(() => {
+        idInputRef.current?.focus();
+      }, 10);
+    } else if (state?.focusField === "password") {
+      setIsActivePWInput(true);
+      setTimeout(() => {
+        pwInputRef.current?.focus();
+      }, 10);
+    }
+  }, [state?.focusField]);
+
   return (
     <S.Container>
       <S.LogoContainer>
@@ -40,7 +57,7 @@ const SignInContainer = () => {
           <S.IdBox>
             <S.LabelAndInputBox>
               <S.IDLabel
-                htmlFor="id"
+                htmlFor="email"
                 $isActive={isActiveIDInput}
                 onClick={() => setIsActiveIDInput(true)}
                 ref={idLabelRef as LegacyRef<HTMLLabelElement>}
@@ -49,15 +66,12 @@ const SignInContainer = () => {
               </S.IDLabel>
               {isActiveIDInput && (
                 <S.Input
-                  id="id"
-                  name="id"
+                  id="email"
+                  name="email"
                   type="text"
                   placeholder=""
                   required
                   maxLength={25}
-                  onInvalid={(e) => {
-                    e.preventDefault();
-                  }}
                   ref={idInputRef}
                 />
               )}
@@ -115,7 +129,7 @@ const SignInContainer = () => {
               </S.DeleteButton>
             )}
           </S.PwBox>
-          <div>{showErrorMessage(state?.message)}</div>
+          <S.ErrorMessage>{showErrorMessage(state?.message)}</S.ErrorMessage>
 
           <S.Button type="submit" disabled={pending}>
             로그인

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useOutsideClick } from "@shared/hooks/useModal/useOutsideClick";
+import { useOutsideClick } from "@shared/hooks/useOutsideClick/useOutsideClick";
 import { truncateString } from "@shared/utils/truncateString/truncateString";
 import IconEmptyProfile from "@widgets/header/icons/IconEmptyProfile";
 

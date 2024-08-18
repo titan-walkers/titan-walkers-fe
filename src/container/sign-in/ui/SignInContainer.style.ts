@@ -45,7 +45,7 @@ export const IDLabel = styled.label<{ $isActive?: boolean }>`
   cursor: pointer;
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<{ $isActive?: boolean }>`
   width: 300px;
   border: none;
   outline: none;
@@ -71,7 +71,7 @@ export const Button = styled.button`
   margin-top: 50px;
   width: 100%;
   height: 50px;
-  background-color: ${({ theme }) => theme.color.green200};
+  background-color: ${({ theme }) => theme.color.green2};
   color: ${({ theme }) => theme.color.white};
   border: none;
   border-radius: 5px;
@@ -152,4 +152,10 @@ export const DeleteButtonSpan = styled.span`
 export const LabelAndInputBox = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const ErrorMessage = styled.div`
+  color: ${({ theme }) => theme.color.red1};
+  font-size: 13px;
+  margin-top: 20px;
 `;
