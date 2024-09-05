@@ -2,7 +2,9 @@
 
 import React from "react";
 
+import { COOKIE_KEYS } from "@shared/constants/cookieKeys.constants";
 import { useModal } from "@shared/hooks/useModal/useModal";
+import { getCookie } from "@shared/utils/cookie/getCookie";
 import { truncateString } from "@shared/utils/truncateString/truncateString";
 
 import IconDropdownArrow from "../../icons/IconDropdownArrow";
@@ -14,8 +16,8 @@ const MAX_NAME_LENGTH = 5;
 
 const HeaderProfile = () => {
   const { modalState, toggleModal, openModal } = useModal();
-  // TODO: API 통해 유저 이름을 포함한 정보 받아오기
-  const userName = truncateString("Sarah Ra", MAX_NAME_LENGTH);
+  const nickName = getCookie(COOKIE_KEYS.nickName) || "";
+  const userName = truncateString(nickName, MAX_NAME_LENGTH);
 
   const openUserProfile = () => {
     if (modalState) return;
