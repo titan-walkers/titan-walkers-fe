@@ -8132,7 +8132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^16.8.1":
+"graphql@npm:^16.8.1, graphql@npm:^16.9.0":
   version: 16.9.0
   resolution: "graphql@npm:16.9.0"
   checksum: 8cb3d54100e9227310383ce7f791ca48d12f15ed9f2021f23f8735f1121aafe4e5e611a853081dd935ce221724ea1ae4638faef5d2921fb1ad7c26b5f46611e9
@@ -13073,6 +13073,7 @@ __metadata:
     eslint-plugin-storybook: ^0.8.0
     eslint-plugin-unused-imports: ^4.0.0
     express: ^4.19.2
+    graphql: ^16.9.0
     husky: ^9.0.11
     jsdom: ^24.1.0
     jwt-decode: ^4.0.0
