@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { COOKIE_KEYS } from "@shared/constants/cookieKeys.constants";
