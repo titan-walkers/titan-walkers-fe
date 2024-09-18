@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { COOKIE_KEYS } from "@shared/constants/cookieKeys.constants";
 import { useModal } from "@shared/hooks/useModal/useModal";
@@ -17,7 +17,11 @@ const MAX_NAME_LENGTH = 5;
 const HeaderProfile = () => {
   const { modalState, toggleModal, openModal } = useModal();
   const nickName = getCookie(COOKIE_KEYS.nickName) || "";
-  const userName = truncateString(nickName, MAX_NAME_LENGTH);
+  const [userName, setUserName] = useState(nickName);
+
+  useEffect(() => {
+    setUserName(truncateString(nickName, MAX_NAME_LENGTH));
+  }, [nickName]);
 
   const openUserProfile = () => {
     if (modalState) return;

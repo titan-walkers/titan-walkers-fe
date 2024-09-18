@@ -50,7 +50,7 @@ export const Input = styled.input<{ $isActive?: boolean }>`
   border: none;
   outline: none;
   background-color: ${({ theme }) => theme.color.white};
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const PwBox = styled.div`
