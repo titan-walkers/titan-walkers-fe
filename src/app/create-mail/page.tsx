@@ -1,7 +1,9 @@
 import React from "react";
 
+import CreateMailContainer from "@container/create-mail/ui/CreateMailContainer";
+
 const CreateMailPage = () => {
-  return <div>create-mail</div>;
+  return <CreateMailContainer />;
 };
 
 export default CreateMailPage;
