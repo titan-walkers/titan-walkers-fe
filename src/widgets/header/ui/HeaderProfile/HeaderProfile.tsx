@@ -9,19 +9,24 @@ import { truncateString } from "@shared/utils/truncateString/truncateString";
 
 import IconDropdownArrow from "../../icons/IconDropdownArrow";
 import IconEmptyProfile from "../../icons/IconEmptyProfile";
-import HeaderProfileDetail from "../HeaderProfileDetail/HeaderProfileDetail";
+
+const HeaderProfileDetail = dynamic(
+  () => import("../HeaderProfileDetail/HeaderProfileDetail")
+);
+import dynamic from "next/dynamic";
+
 import * as S from "./HeaderProfile.style";
 
 const MAX_NAME_LENGTH = 5;
 
 const HeaderProfile = () => {
-  const { modalState, toggleModal, openModal } = useModal();
-  const nickName = getCookie(COOKIE_KEYS.nickName) || "";
-  const [userName, setUserName] = useState(nickName);
+  const { modalState, openModal, closeModal } = useModal();
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
+    const nickName = getCookie(COOKIE_KEYS.nickName) || "";
     setUserName(truncateString(nickName, MAX_NAME_LENGTH));
-  }, [nickName]);
+  }, []);
 
   const openUserProfile = () => {
     if (modalState) return;
@@ -36,7 +41,7 @@ const HeaderProfile = () => {
         <S.ProfileName>{userName}</S.ProfileName>
         <IconDropdownArrow />
       </S.ProfileWrapper>
-      <HeaderProfileDetail modalState={modalState} toggleModal={toggleModal} />
+      <HeaderProfileDetail modalState={modalState} toggleModal={closeModal} />
     </>
   );
 };
