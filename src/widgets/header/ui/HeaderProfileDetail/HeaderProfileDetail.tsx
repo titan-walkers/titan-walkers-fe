@@ -44,12 +44,10 @@ const HeaderProfileDetail = ({ modalState, toggleModal }: Props) => {
         </S.ProfileImage>
         <S.ProfileInfoWrapper>
           <S.ProfileInfoRow>
-            <S.Name>
-              <span>{userName}</span> 님
-            </S.Name>
+            <S.Name>{/* <span>{userName}</span> 님 */}</S.Name>
             <S.SignOutButton onClick={signOut}>{SIGN_OUT_TEXT}</S.SignOutButton>
           </S.ProfileInfoRow>
-          <S.Email href="/">{userEmail}</S.Email>
+          {/* <S.Email href="/">{userEmail}</S.Email> */}
         </S.ProfileInfoWrapper>
       </S.ProfileContents>
     </S.ProfileDetailWrapper>

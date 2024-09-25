@@ -33,7 +33,7 @@ const HeaderProfile = () => {
         <S.ProfileImageWrapper>
           <IconEmptyProfile width={24} height={24} />
         </S.ProfileImageWrapper>
-        <S.ProfileName>{userName}</S.ProfileName>
+        {/* <S.ProfileName>{userName}</S.ProfileName> */}
         <IconDropdownArrow />
       </S.ProfileWrapper>
       <HeaderProfileDetail modalState={modalState} toggleModal={toggleModal} />

@@ -9,7 +9,7 @@ type Props = {
 
 const Button = ({ buttonStyle, onClick, content }: Props) => {
   return (
-    <S.Button buttonStyle={buttonStyle} onClick={onClick} type="button">
+    <S.Button $buttonStyle={buttonStyle} onClick={onClick} type="button">
       {content}
     </S.Button>
   );

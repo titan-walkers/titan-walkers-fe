@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
+import RecipientEmailInput from "@features/RecipientEmailInput/ui/RecipientEmailInput";
 import Button from "@shared/button/Button";
 import SearchInput from "@widgets/SearchInput/SearchInput";
 
@@ -11,6 +12,9 @@ const CreateMailContainer = () => {
     console.log("send");
   };
 
+  const [emailArray, setEmailArray] = useState<
+    { name: string; email: string }[]
+  >([]);
   return (
     <S.Wrapper>
       <S.UpWrapper>
@@ -33,7 +37,10 @@ const CreateMailContainer = () => {
           <S.RecipientField>
             <S.FieldLabel>받는 사람</S.FieldLabel>
             <S.InputWrapper>
-              <S.Input type="text" />
+              <RecipientEmailInput
+                emailArray={emailArray}
+                setEmailArray={setEmailArray}
+              />
             </S.InputWrapper>
           </S.RecipientField>
           <S.SubjectField>
