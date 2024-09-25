@@ -1,8 +1,11 @@
 import React from "react";
 
+import dynamic from "next/dynamic";
+
 import * as S from "./Header.style";
 import HeaderLogo from "./ui/HeaderLogo/HeaderLogo";
-import HeaderProfile from "./ui/HeaderProfile/HeaderProfile";
+
+const HeaderProfile = dynamic(() => import("./ui/HeaderProfile/HeaderProfile"));
 
 const Header = () => {
   return (

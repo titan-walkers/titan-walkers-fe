@@ -14,6 +14,7 @@ const IconEmptyProfile = ({ width, height }: Props) => {
       alt="empty profile"
       width={width}
       height={height}
+      priority
     />
   );
 };
