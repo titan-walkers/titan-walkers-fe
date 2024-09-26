@@ -8,6 +8,7 @@ type Props = {
   inputType?: string;
   inputStyle?: string;
   value?: string;
+  ref?: React.RefObject<HTMLInputElement>;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 /**
@@ -18,13 +19,14 @@ type Props = {
  * @param placeholder inputbox placeholder
  * @param inputType inputbox의 inputType
  */
-const InputBox = ({ inputType, inputStyle, value, ...rest }: Props) => {
+const InputBox = ({ inputType, inputStyle, value, ref, ...rest }: Props) => {
   return (
     <>
       <S.InputBox
         $inputStyle={inputStyle}
         value={value}
         type={inputType || "text"}
+        ref={ref}
         {...rest}
       />
     </>
